@@ -55,11 +55,8 @@ const FantasyBasketballDashboard = () => {
             {/* Header */}
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-3">
-                <Settings className="text-blue-500" />
-                Odaberi Timove za Analizu
-                <Trophy className="text-yellow-500" />
+                Odaberi 2 ekipe za usporedbu
               </h1>
-              <p className="text-gray-600 text-lg">Odaberi svoj tim i protivnika za head-to-head usporedbu</p>
             </div>
 
             {/* Team Selection */}
@@ -67,7 +64,7 @@ const FantasyBasketballDashboard = () => {
               {/* Moj Tim */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h2 className="text-2xl font-bold text-green-600 mb-4 text-center">
-                  🏀 Moj Tim
+                  Ekipa A
                 </h2>
                 <div className="space-y-3">
                   {leagueTeams.map(team => (
@@ -93,7 +90,7 @@ const FantasyBasketballDashboard = () => {
               {/* Protivnički Tim */}
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h2 className="text-2xl font-bold text-red-600 mb-4 text-center">
-                  ⚔️ Protivnik
+                  Ekipa B
                 </h2>
                 <div className="space-y-3">
                   {leagueTeams
@@ -129,7 +126,7 @@ const FantasyBasketballDashboard = () => {
                         <div className="text-lg font-semibold text-green-600">{selectedMyTeam.name}</div>
                         <div className="text-sm text-gray-600">{selectedMyTeam.owner}</div>
                       </div>
-                      <div className="text-3xl">⚡</div>
+                      <div className="text-3xl">vs</div>
                       <div className="text-center">
                         <div className="text-lg font-semibold text-red-600">{selectedOpponent.name}</div>
                         <div className="text-sm text-gray-600">{selectedOpponent.owner}</div>
@@ -265,15 +262,13 @@ const FantasyBasketballDashboard = () => {
           {/* Header s odabranim timovima */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-3">
-              <Trophy className="text-yellow-500" />
-              H2H Analiza
-              <Target className="text-blue-500" />
+              Fantasystična analiza
             </h1>
             <div className="flex items-center justify-center gap-4 mt-4">
             <span className="bg-green-100 text-green-800 px-4 py-2 rounded-lg font-semibold">
               {selectedMyTeam.name}
             </span>
-              <span className="text-2xl">⚡</span>
+              <span className="text-2xl">vs</span>
               <span className="bg-red-100 text-red-800 px-4 py-2 rounded-lg font-semibold">
               {selectedOpponent.name}
             </span>
